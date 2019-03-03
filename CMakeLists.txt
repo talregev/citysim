@@ -27,6 +27,15 @@ endif (NOT CMAKE_BUILD_TYPE)
 find_package (Qt5Widgets REQUIRED)
 find_package (Qt5Core REQUIRED)
 find_package(gazebo 9 REQUIRED)
+find_package(catkin REQUIRED)
+
+catkin_package(
+  INCLUDE_DIRS plugins
+  LIBRARIES 
+  LensFlareVisualPlugin
+  BloomVisualPlugin
+  TrafficLightsGUIPlugin
+)
 
 include(GNUInstallDirs)
 
@@ -48,3 +57,10 @@ add_subdirectory(plugins)
 add_subdirectory(models)
 add_subdirectory(worlds)
 add_subdirectory(media)
+
+
+
+install(DIRECTORY plugins/
+   DESTINATION ${CATKIN_GLOBAL_INCLUDE_DESTINATION}
+   FILES_MATCHING PATTERN "*.hh"
+)

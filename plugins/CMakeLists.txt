@@ -17,7 +17,7 @@ foreach (src ${plugins})
   add_library(${src} SHARED ${src}.cc)
   target_link_libraries(${src} ${GAZEBO_LIBRARIES})
   install (TARGETS ${src} DESTINATION ${CITYSIM_PLUGIN_INSTALL_DIR})
-endforeach (src ${plugins})
+endforeach ()
 
 set (GUIplugin
   TrafficLightsGUIPlugin
@@ -33,3 +33,11 @@ foreach (guiSrc ${GUIplugin})
   )
   install (TARGETS ${guiSrc} DESTINATION ${CITYSIM_PLUGIN_INSTALL_DIR})
 endforeach ()
+
+install(TARGETS 
+	LensFlareVisualPlugin
+	BloomVisualPlugin
+	TrafficLightsGUIPlugin
+	DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+	LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+)

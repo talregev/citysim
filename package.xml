@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>citysim</name>
+  <version>0.1.0</version>
+  <description>
+    Robot-independent Gazebo plugins for sensors, motors and dynamic reconfigurable components.
+  </description>
+  <maintainer email="jrivero@osrfoundation.org">Jose Luis Rivero</maintainer>
+
+  <license>BSD, Apache 2.0</license>
+
+  <url type="website">http://gazebosim.org/tutorials?cat=connect_ros</url>
+  <url type="bugtracker">https://github.com/ros-simulation/gazebo_ros_pkgs/issues</url>
+  <url type="repository">https://github.com/ros-simulation/gazebo_ros_pkgs</url>
+
+ <buildtool_depend>catkin</buildtool_depend>
+
+</package>
